@@ -3,13 +3,13 @@ const Benchmark = require('benchmark');
 const { main: classBased } = require('./class-based/main');
 const { main: recursive } = require('./class-recursive/main')
 
-function suiteHelper() {
+const suiteHelper = (i) => {
   console.log(``)
   console.log('-------------------------------------')
   console.log(``)
   console.log(chalk.bgGreen('Suite Results:'));
   console.log(``)
-  this.forEach(result => {
+  i.forEach(result => {
     console.log(chalk.bgYellow(`${result.name}:`))
     console.log(``)
     console.log(chalk.red(`${result.hz}`), 'ops/sec')
@@ -18,6 +18,10 @@ function suiteHelper() {
     console.log(chalk.red(`${result.stats.variance}`), 'variance')
     console.log(``)
   })
+}
+
+function display() {
+  suiteHelper(this)
 }
 
 const suite = new Benchmark.Suite;
@@ -29,5 +33,7 @@ suite
   .add('Recursive class', () => {
     recursive()
   })
-  .on('complete', suiteHelper)
+  .on('complete', display)
   .run({ async: true });
+
+module.exports = { suiteHelper }

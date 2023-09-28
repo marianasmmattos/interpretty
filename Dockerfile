@@ -9,4 +9,4 @@ COPY . .
 
 RUN npm install
 
-CMD ["node", "main.js"]
+CMD ["node", "benchmark.js"]
