@@ -1,7 +1,7 @@
 const {
   TOKEN_MAP,
   translateFile
-} = require('./rinha')
+} = require('./formats')
 
 class Translator {
   constructor(current) {
