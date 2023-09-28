@@ -14,10 +14,6 @@ class Interpreter {
     return value
   }
 
-  addStatement(statement) {
-    this.statements.push(statement)
-  }
-
   getStatements() {
     const statementsFn = new Function(this.statements)
 

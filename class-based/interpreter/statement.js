@@ -9,8 +9,9 @@ class Statement {
     this.translated = null;
   }
 
-  generate() {
-    const translator = new Translator(this.current)
+  generate(custom = null) {
+    const currentTranslator = custom || Translator;
+    const translator = new currentTranslator(this.current)
     const translated = translator.parse()
 
     this.translated = translated

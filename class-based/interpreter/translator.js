@@ -1,16 +1,14 @@
-const {
-  TOKEN_MAP,
-  translateFile
-} = require('./formats')
+const { Format } = require('./format')
 
 class Translator {
-  constructor(current) {
+  constructor(current, formatter = new Format()) {
     this.current = current
+    this.formatter = formatter
   }
 
   parse() {
     if(!!this.current['expression']) {
-      return this.transformFile(this.current)
+      return this.formatter.translateFile(this.current)
     }
 
     return this.translate()
@@ -21,10 +19,7 @@ class Translator {
   }
 
   translate() {
-    const translator = TOKEN_MAP[this.current.kind]
-    const translated = translator(this.current)
-
-    return translated
+    return this.formatter.execute(this.current)
   }
 }
 
