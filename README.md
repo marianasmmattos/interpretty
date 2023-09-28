@@ -38,7 +38,7 @@ docker build -t interpretty .
 docker run -it --rm --cpus=2 --memory=2g interpretty
 ```
 
-It'll show you a benchmark for current implemented versions, be free to suggest new ones
+It'll show you a benchmark for current implemented versions, like image below, be free to suggest new ones
 
 --------------------------------------------------------------------------------------------
 
@@ -49,7 +49,9 @@ docker build -t interpretty .
 docker run -it --rm --cpus=2 --memory=2g interpretty
 ```
 
-O container irá mostrar o resultado do benchmark de todas as implementações feitas no repositório, sinta-se a vontade para sugerir mais
+O container irá mostrar o resultado do benchmark de todas as implementações feitas no repositório, como na imagem abaixo, sinta-se a vontade para sugerir mais
+
+![Captura de tela de 2023-09-28 16-49-08](https://github.com/marianasmmattos/interpretty/assets/66320795/a8ef318c-6259-4ec7-969f-7f28b3b47685)
 
 
 ## Useful links | Links úteis
