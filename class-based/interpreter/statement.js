@@ -1,6 +1,6 @@
-const { Parser } = require('./parser');
+const { Translator } = require('./translator');
 
-class Token {
+class Statement {
   static current
   static translated
 
@@ -10,11 +10,7 @@ class Token {
   }
 
   generate() {
-    return this.parseToken()
-  }
-
-  parseToken() {
-    const translator = new Parser(this.current)
+    const translator = new Translator(this.current)
     const translated = translator.parse()
 
     this.translated = translated
@@ -27,4 +23,4 @@ class Token {
   }
 }
 
-module.exports = { Token }
+module.exports = { Statement }

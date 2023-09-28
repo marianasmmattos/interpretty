@@ -1,9 +1,9 @@
 const {
   TOKEN_MAP,
   translateFile
-} = require('../tokenizers/rinha')
+} = require('./rinha')
 
-class Parser {
+class Translator {
   constructor(current) {
     this.current = current
   }
@@ -28,4 +28,4 @@ class Parser {
   }
 }
 
-module.exports = { Parser }
+module.exports = { Translator }
