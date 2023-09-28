@@ -1,4 +1,4 @@
-## Sumário | Summary
+## Summary | Sumário
 
 - [About | Sobre](#about-sobre)
 - [How to run | Como rodar](#how-to-run-como-rodar)
@@ -7,11 +7,11 @@
 
 ## About | Sobre
 
-The current code is an implementation for the challenge proposed [here](https://github.com/aripiprazole/rinha-de-compiler/).
+This repository is an implementation for the challenge proposed [here](https://github.com/aripiprazole/rinha-de-compiler/).
 
-The original code gave an AST from a custom programming language (`.rinha`), and we're challenged to make an interpreter or compiler, being able to run in a docker image with max 2gb ram 2 cpu.
+The original challenge was to, given an AST json output from a custom programming language (`.rinha`), to make an interpreter or compiler and also being able to run in a docker image with max 2gb ram 2 cpu.
 
-I decided to make using javascript. Sadly, the challenge was over when I discovered it. But loved anyway, so here it it
+I decided to make it using javascript. Sadly, the challenge was over when I discovered it. But loved anyway, so here we are
 
 --------------------------------------------------------------------------------------------
 
