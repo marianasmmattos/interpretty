@@ -6,13 +6,11 @@ class Interpreter {
 
   constructor() {
     this.statements = []
-    this.current = null
+    this.statement = null
   }
 
   execute(ast) {
-    this.generateStatement(ast)
-
-    return this.getStatements()
+    return this.generateStatement(ast)
   }
 
   generateStatement(obj) {
@@ -20,7 +18,7 @@ class Interpreter {
 
     statement.generate()
 
-    this.current = statement.current
+    this.statement = statement
 
     this.statements.push(statement)
 
@@ -28,23 +26,20 @@ class Interpreter {
   }
 
   next() {
-    const next = this.current && this.current['next'];
+    this.executeStatement(this.statement)
+
+    const next = this.statement.current && this.statement.current['next'];
     
     if(!next) {
       return;
     }
 
-    this.executeNext(next)
+    this.generateStatement(next)
   }
 
-  executeNext(statement) {   
-    this.generateStatement(statement)
-  }
-
-  getStatements() {
-    const jsStatements = this.statements.map(statement => statement.translated)
-    const jsString = jsStatements.join(';')
-    const statementsFn = new Function(jsString)
+  executeStatement() {
+    const jsStatement = this.statement.translated
+    const statementsFn = new Function(jsStatement)
 
     return statementsFn()
   }
