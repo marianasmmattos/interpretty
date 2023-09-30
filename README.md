@@ -36,9 +36,6 @@ docker build -t interpretty .
 docker run -it --rm --cpus=2 --memory=2g interpretty
 ```
 
-![Captura de tela de 2023-09-28 16-49-08](https://github.com/marianasmmattos/interpretty/assets/66320795/a8ef318c-6259-4ec7-969f-7f28b3b47685)
-
-
 ## Useful links | Links úteis
 
 - [Crafting Interpreters](https://craftinginterpreters.com)
