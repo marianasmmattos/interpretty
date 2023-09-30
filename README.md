@@ -2,7 +2,6 @@
 
 - [About | Sobre](#about-sobre)
 - [How to run | Como rodar](#how-to-run-como-rodar)
-- [Technical explanation | Abordagem técnica](#technical-explanation-abordagem-tecnica)
 - [Useful Links | Links Úteis](#useful-links-links-uteis)
 
 ## About | Sobre
